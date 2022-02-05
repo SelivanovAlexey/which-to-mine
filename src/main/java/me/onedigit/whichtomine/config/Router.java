@@ -8,9 +8,11 @@ import org.springframework.web.reactive.function.server.*;
 @Configuration
 public class Router {
 
+    private final static String GPU_INFO_ENDPOINT="/gpu";
+
     @Bean
     public RouterFunction<ServerResponse> route(RestHandler restHandler){
         return RouterFunctions
-                .route(RequestPredicates.GET("/gpu"), restHandler::getGpuHashrateInfo);
+                .route(RequestPredicates.GET(GPU_INFO_ENDPOINT), restHandler::getGpuHashrateInfo);
     }
 }
