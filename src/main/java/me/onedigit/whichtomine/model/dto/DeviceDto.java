@@ -1,5 +1,6 @@
 package me.onedigit.whichtomine.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -7,6 +8,7 @@ import java.util.Map;
 
 @NoArgsConstructor
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DeviceDto {
     String name;
     Type type;
@@ -14,5 +16,4 @@ public class DeviceDto {
     Map<String, Double> hashrates;
     Boolean isRumor;
     Boolean isLhr;
-
 }

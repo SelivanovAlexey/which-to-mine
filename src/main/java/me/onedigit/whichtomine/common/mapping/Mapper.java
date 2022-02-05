@@ -6,6 +6,7 @@ import lombok.SneakyThrows;
 import java.util.HashMap;
 import java.util.Map;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
@@ -37,7 +38,7 @@ public abstract class Mapper<F, T> {
         return to;
     }
 
-    public <E> T map(F from, T to) {
+    public <E> T map(@NonNull F from, @NonNull T to) {
         this.entities(from, to);
         return this.map();
     }
