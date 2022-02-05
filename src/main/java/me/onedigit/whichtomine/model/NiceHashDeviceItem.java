@@ -1,8 +1,10 @@
 package me.onedigit.whichtomine.model;
 
-import lombok.Value;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Value
+@Data
+@NoArgsConstructor
 public class NiceHashDeviceItem {
     String id;
     String name;
