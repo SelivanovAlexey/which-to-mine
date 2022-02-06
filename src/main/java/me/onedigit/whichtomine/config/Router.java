@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.server.*;
 @Configuration
 public class Router {
 
-    private final static String GPU_INFO_ENDPOINT="/hasrateInfo";
+    private final static String GPU_INFO_ENDPOINT="/hashrateInfo";
 
     @Bean
     public RouterFunction<ServerResponse> route(RestHandler restHandler){
